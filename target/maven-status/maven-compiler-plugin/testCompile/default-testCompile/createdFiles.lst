@@ -1,0 +1,15 @@
+sequential\Login.class
+pomClasses\POMBrands.class
+projectTestCases\CategoriesTC.class
+projectTestCases\Login.class
+sequential\UnitTC.class
+projectTestCases\AddProducts.class
+crossBrowserTC\UnitTC.class
+pomClasses\POMAddProduct.class
+projectTestCases\UnitTC.class
+sequential\CategoriesTC.class
+pomClasses\POMLogin.class
+pomClasses\POMUnits.class
+crossBrowserTC\Login.class
+pomClasses\POMCategories.class
+projectTestCases\BrandsTC.class
