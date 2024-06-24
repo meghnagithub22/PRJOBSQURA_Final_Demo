@@ -53,10 +53,10 @@ public class Login
 		 objPomLogin.login(username,password);
 
 		String current_url = driver.getCurrentUrl();
-		SoftAssert asser = new SoftAssert();
-		asser.assertEquals("123", current_url);
+		SoftAssert assertion = new SoftAssert();
+		assertion.assertEquals("123", current_url);
 		objPomLogin.signout();
-		asser.assertAll();
+		assertion.assertAll();
 	}
 	
 
