@@ -9,11 +9,25 @@
           <include name="beforeTest"/>
           <include name="deletecategoriesDetails"/>
           <include name="categoriesSearch"/>
-          <include name="CategoryAdd" invocation-numbers="0"/>
+          <include name="excel"/>
+          <include name="CategoryAdd"/>
         </methods>
       </class> <!-- sequential.CategoriesTC -->
+      <class name="sequential.UnitTC">
+        <methods>
+          <include name="deleteunit"/>
+          <include name="Unitexcel"/>
+          <include name="SearchUnit"/>
+          <include name="extendreportgenerate"/>
+          <include name="closereport"/>
+          <include name="UnitAdd"/>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- sequential.UnitTC -->
       <class name="sequential.Login">
         <methods>
+          <include name="Loginexcel"/>
           <include name="logInFailed"/>
           <include name="beforeTest"/>
         </methods>

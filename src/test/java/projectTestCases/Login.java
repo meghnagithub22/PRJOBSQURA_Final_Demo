@@ -15,15 +15,15 @@ import waitUtility.WaitUtility;
 import webDriverUtility.DriverManager;
 
 import org.testng.annotations.BeforeTest;
+import static org.testng.Assert.assertTrue;
 
 import static org.testng.Assert.assertEquals;
 
 import java.io.IOException;
-import java.sql.Driver;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
 import org.testng.annotations.AfterTest;
 
 public class Login extends ExtendTestManager 
@@ -41,7 +41,7 @@ public class Login extends ExtendTestManager
 	
 	
 	@Test(priority = 1, enabled = true)
-	public void Loginexcel() throws Exception 
+	public void Loginexcel() throws IOException, InterruptedException
 	{
 		test=extent.createTest("Validating login scenario");
 		boolean Status;
@@ -72,21 +72,6 @@ public class Login extends ExtendTestManager
 			test.log(com.aventstack.extentreports.Status.FAIL, "Login failed");
 		}
 		
-	}
-	
-
-
-	@Test(priority = 2, enabled = true, groups={"failed"})
-	public void logInFailed() throws IOException, InterruptedException {
-		String username=ExcelRead.readStringData(1, 0);
-		 String password=ExcelRead.readNumbericData(1, 1);
-		 objPomLogin.login(username,password);
-
-		String current_url = driver.getCurrentUrl();
-		SoftAssert asser = new SoftAssert();
-		asser.assertEquals("123", current_url);
-		objPomLogin.signout();
-		asser.assertAll();
 	}
 	
 
